@@ -1,0 +1,23 @@
+{
+  "name": "@rstone770/acd2js",
+  "packageManager": "yarn@4.1.0",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "bin": "bin/acd2js",
+  "main": "lib/acd2js.js",
+  "scripts": {
+    "build": "esbuild src/acd2js.ts --bundle --platform=node --format=esm --outdir=lib",
+    "format:fix": "prettier --write .",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,json,js,html}": "prettier --write"
+  }
+}
